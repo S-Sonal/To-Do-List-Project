@@ -23,6 +23,7 @@ public class AppInterface {
         System.out.println("5. Remove Task");
         System.out.println("6. Save and Quit");
         System.out.println("---------------------------------------");
+        System.out.println("changes");
 
         Scanner in = new Scanner(System.in);
         while (!in.hasNextInt()) {
