@@ -5,8 +5,8 @@ import java.util.List;
 public class TaskManager {
 
 
-   private static ArrayList<Task> theList;
-    public static void createTask()
+    ArrayList<Task> theList= new ArrayList<>();
+    public  void createTask()
 
     {
         Task tsk = new Task();
