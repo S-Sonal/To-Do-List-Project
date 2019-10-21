@@ -10,6 +10,8 @@ public class ToDoList {
         AppInterface a = new AppInterface();
         a.printWelcome();
 
+        AppInterface b = new AppInterface();
+        b.selectOptions();
 
     }
 

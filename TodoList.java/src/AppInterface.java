@@ -12,18 +12,25 @@ public class AppInterface {
 
     public static void printWelcome() {
 
+        System.out.println("**************************************");
         System.out.println("Welcome to the To Do List Application!");
-        System.out.println("                                      ");
+        System.out.println("**************************************");
+
+    }
+
+    public static void selectOptions() {
+
+        System.out.println("                                        ");
         System.out.println("Please select your options");
         System.out.println("                                      ");
-        System.out.println("1. Show Task List by due date");
+        System.out.println("1. Show Task List");
         System.out.println("2. Add new Task");
         System.out.println("3. Update Task");
         System.out.println("4. Update task as done");
         System.out.println("5. Remove Task");
         System.out.println("6. Save and Quit");
         System.out.println("---------------------------------------");
-        System.out.println("changes");
+
 
         Scanner in = new Scanner(System.in);
         while (!in.hasNextInt()) {
@@ -40,8 +47,9 @@ public class AppInterface {
             case 1:
                 //call showTask();
                 i = 1;
-                System.out.println("show");
                 tm.showTask();
+                AppInterface b = new AppInterface();
+                b.selectOptions();
                 break;
             case 2:
                 //call createTask
@@ -52,6 +60,7 @@ public class AppInterface {
             case 3:
                 //call editTask
                 i = 3;
+                tm.editTask();
                 break;
 
             case 4:
