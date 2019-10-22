@@ -8,7 +8,7 @@ public class AppInterface {
     /**
      * Print out the opening message for the user.
      */
-    ArrayList<Task> theList;
+    //ArrayList<Task> theList;
 
     public static void printWelcome() {
 
@@ -26,9 +26,8 @@ public class AppInterface {
         System.out.println("1. Show Task List");
         System.out.println("2. Add new Task");
         System.out.println("3. Update Task");
-        System.out.println("4. Update task as done");
-        System.out.println("5. Remove Task");
-        System.out.println("6. Save and Quit");
+        System.out.println("4. Remove Task");
+        System.out.println("5. Save and Quit");
         System.out.println("---------------------------------------");
 
 
@@ -64,21 +63,15 @@ public class AppInterface {
                 break;
 
             case 4:
-                //call changeTaskStatus
+                //call removeStatus
                 i = 4;
+                tm.removeTask();
                 break;
 
             case 5:
-                //call removeStatus
+                //Save and Quit
                 i = 5;
                 break;
-
-            case 6:
-                //call saveToFile
-                i = 6;
-                break;
-
-
         }
     }
 

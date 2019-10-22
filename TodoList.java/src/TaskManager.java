@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class TaskManager {
 
-
+    AppInterface b = new AppInterface();
     static ArrayList<Task> list= new ArrayList<>();
 
     public static void showTask()
@@ -43,24 +43,33 @@ public class TaskManager {
         System.out.println("Task has been successfully added");
         System.out.println("                                      ");
 
-        AppInterface b = new AppInterface();
+        //AppInterface b = new AppInterface();
         b.selectOptions();
     }
 
-    public void editTask() {
-        System.out.println("Would you like to edit the task ?");
-        System.out.println("                                  ");
-        System.out.println("Confirm Y/N");
+    public void editTask()
+
+    {
+        System.out.println("Please select the task to be edited from below list");
+        System.out.println("                                                   ");
+        //AppInterface b = new AppInterface();
+        TaskManager tm = new TaskManager();
+        showTask();
+
+        System.out.println("                                                   ");
+        System.out.println("Please enter the S.No to be edited from the list provided");
+        System.out.println("                                                         ");
+
         Scanner in = new Scanner(System.in);
-        String Confirm = in.next();
+        while (!in.hasNextInt()) {
+            System.out.println("Input is not a number.");
+            in.nextLine();
+        }
+        int sno = in.nextInt();
 
-        switch (Confirm)
-        {
-            case "Y":
+        Task t = list.get(sno);
 
-                TaskManager tm = new TaskManager();
-                tm.showTask();
-
+                System.out.println("                                                   ");
                 System.out.println("Please confirm the changes to be done");
                 System.out.println("                                      ");
                 System.out.println("1. Edit Title");
@@ -71,66 +80,82 @@ public class TaskManager {
                 System.out.println("                                      ");
 
                 int userInput = in.nextInt();
-                //int i;
 
-                switch (userInput) {
+                switch (userInput)
+                {
                     case 1:
-                        //i = 1;
                         System.out.println("Please enter the new title");
                         String title =  in.next();
-                        //.setTitle(title);
+                        t.title= title;
+                        System.out.println("Updated successfully !!");
+                        showTask();
+                        b.selectOptions();
                         break;
 
                     case 2:
-                        //i = 2;
                         System.out.println("Please enter the new date");
                         String date = in.next();
+                        t.dueDate = date;
+                        System.out.println("Updated successfully !!");
+                        showTask();
+                        b.selectOptions();
                         break;
 
                     case 3:
-                        //i = 3;
                         System.out.println("Please enter the new project name");
-                        String project = in.next();
+                        String Project = in.next();
+                        t.project = Project;
+                        System.out.println("Updated successfully !!");
+                        showTask();
+                        AppInterface.selectOptions();
                         break;
 
                     case 4:
-                        //i = 4;
                         System.out.println("Please enter the new status");
-                        String status = in.next();
+                        String Status = in.next();
+                        t.status = Status;
+                        System.out.println("Updated successfully !!");
+                        showTask();
+                        b.selectOptions();
                         break;
 
                     case 5:
-                        //i = 4;
                         System.out.println("Quit");
                         break;
 
-                }
-                //theList.set(1,tsk);
-                break;
-
-            case "N":
-
-                System.out.println("No update required.");
-                break;
         }
     }
 
-    public static void removeTask()
+    public void removeTask()
 
     {
+        //AppInterface b = new AppInterface();
+        TaskManager tm = new TaskManager();
+
+        System.out.println("                                                   ");
+        System.out.println("Please enter the S.No to be removed from the list provided");
+        showTask();
+        System.out.println("                                                   ");
+
         Scanner in=new Scanner(System.in);
-        System.out.println("enter position you want to delete");
+
+        while (!in.hasNextInt()) {
+            System.out.println("Input is not a number.");
+            in.nextLine();
+        }
         int num=in.nextInt();
-        //heList.remove(num);
-        //theList.remove(2);
-        // System.out.println(theList);
+        if (num > list.size()-1){
+            System.out.println("Invalid Input !!");
+            b.selectOptions();
+        }
+        else {
+            list.remove(num);
+            System.out.println("List Updated Successfully !!");
+            showTask();
+            b.selectOptions();
+        }
     }
 
-    public static void changeTaskStatus()
-
-    {
-
-    }
 
     public static void saveToFile()
 
@@ -138,15 +163,5 @@ public class TaskManager {
 
     }
 
-    public static void loadFile()
 
-    {
-
-    }
-
-    public static void sort()
-
-    {
-
-    }
 }
