@@ -10,15 +10,17 @@ public class TaskManager {
 
     {
         System.out.println("S.No     Title        Date         Status           Project");
+        if ( list.size() == 0) {
+            System.out.println(" No task in the list");
+        }
+
+        else {
         for (int i = 0; i < list.size(); i++) {
-            // if ( list.size() == 0) {
-            //System.out.println(" No task in the list");
-            //}
-            //else {
             System.out.println(i + " " + list.get(i));
-            //}
+            }
         }
     }
+
 
     public  void createTask()
 
@@ -41,7 +43,7 @@ public class TaskManager {
 
         System.out.println(list);
         System.out.println("Task has been successfully added");
-        System.out.println("                                      ");
+        System.out.println("                                     ");
 
         //AppInterface b = new AppInterface();
         b.selectOptions();

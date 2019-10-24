@@ -8,7 +8,7 @@ public class AppInterface {
     /**
      * Print out the opening message for the user.
      */
-    //ArrayList<Task> theList;
+
 
     public static void printWelcome() {
 
