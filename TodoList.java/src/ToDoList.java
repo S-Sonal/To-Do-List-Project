@@ -1,11 +1,11 @@
 
+import java.io.IOException;
 import java.util.*;
 
 public class ToDoList {
 
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
 
         AppInterface a = new AppInterface();
         a.printWelcome();

@@ -1,6 +1,4 @@
-import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.List;
 
 public class AppInterface {
 
@@ -53,24 +51,40 @@ public class AppInterface {
             case 2:
                 //call createTask
                 i = 2;
+                System.out.println("Following details are required to add a new task");
+                System.out.println("                                      ");
                 tm.createTask();
                 break;
 
             case 3:
                 //call editTask
                 i = 3;
+                System.out.println("Please select the task to be edited from below list");
+                System.out.println("                                                   ");
+
+                tm.showTask();
+
+                System.out.println("                                                   ");
+                System.out.println("Please enter the S.No to be edited from the list provided");
+                System.out.println("                                                         ");
+
                 tm.editTask();
                 break;
 
             case 4:
                 //call removeStatus
                 i = 4;
+                System.out.println("                                                   ");
+                System.out.println("Please enter the S.No to be removed from the list provided");
+                tm.showTask();
+                System.out.println("                                                   ");
                 tm.removeTask();
                 break;
 
             case 5:
                 //Save and Quit
                 i = 5;
+                //tm.saveToFile();
                 break;
         }
     }
