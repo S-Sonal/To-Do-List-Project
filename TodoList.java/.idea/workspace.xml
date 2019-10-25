@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0c61796-ffb7-43e8-a34a-d390a1cc259a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/unitTesting.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/To do list-Class Diagram.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoList.java.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TodoList.java.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TodoList.java/AppInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TodoList.java/AppInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TodoList.java/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TodoList.java/Task.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TodoList.java/TaskManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TodoList.java/TaskManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TodoList.java/ToDoList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TodoList.java/ToDoList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TaskManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TaskManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ToDoList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoList.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -101,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571907849239</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Read me file added">
+      <created>1571996978801</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1571996978801</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,6 +117,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="updated code in taskmanager" />
     <MESSAGE value="class diagram added" />
-    <option name="LAST_COMMIT_MESSAGE" value="class diagram added" />
+    <MESSAGE value="Read me file added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Read me file added" />
   </component>
 </project>
